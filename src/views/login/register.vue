@@ -70,7 +70,7 @@ export default {
             [
             {
                 value: '1',
-                text: '+861',
+                text: '+86',
             },
             {
                 value: '2',
