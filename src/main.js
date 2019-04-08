@@ -11,14 +11,15 @@ import FastClick from 'fastclick'
 FastClick.attach(document.body);
 //引入初始化样式
 import 'normalize.css'
-import './styles/index.styl'
+import './styles/index.less'
 //引入rem
 import 'lib-flexible/flexible'
-//引入mand
-import mandMobile from 'mand-mobile'
-import 'mand-mobile/lib/mand-mobile.css'
+//引入vant
+import Vant from 'vant';
+import 'vant/lib/index.css';
 
-Vue.use(mandMobile)
+Vue.use(Vant);
+
 
 
 // 注册全局过滤器

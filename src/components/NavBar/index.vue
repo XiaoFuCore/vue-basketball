@@ -1,72 +1,86 @@
 <template>
-    <div class="nav-container" :class="{'nav-border':border}">
-        <md-icon :name="icon"  :size="iconSize"  :color='color' @click="toBack"></md-icon>
-        <div class="nav-title">
-            {{title}}
-        </div>
-        <div class="nav-right">
-             <slot name="right"></slot>
-        </div>
+    <div class="nav-container">
+         <van-nav-bar
+          :title="title"
+          :left-text="leftText"
+          :right-text="rightText"
+          :left-arrow ='leftArrow'
+          @click-left="onClickLeft" 
+          @click-right="onClickRight" 
+          :fixed='fixed'
+          :border='border' />
     </div>
 </template>
 
 <script>
 export default {
+    name:'NavBav',
     props:{
-        icon:{
-            type: String,
-            default: 'arrow-left'
-        },
         title:{
             type: String,
-            default:''
+            default: ''
         },
-        iconSize: {
+        leftArrow:{
+            type: Boolean,
+            default: true
+        },
+        leftText:{
             type: String,
-            default: 'xs'
+            default: ''
         },
-        border: {
+        rightText:{
+            type: String,
+            default: ''
+        },
+        url:{
+            type: String,
+            default: ''
+        },
+        fixed:{
+            type: Boolean,
+            default: true
+        },
+        border:{
             type: Boolean,
             default: false
-        },
-        color: {
-            type: String,
-            default: '#9F9F9F'
         }
     },
     methods: {
-        toBack() {
+        onClickLeft() {
             this.$router.go(-1);
+        },
+        onClickRight(){
+            this.$router.push({
+                path:this.url
+            })
         }
-    }
+    },
 }
 </script>
 
-
-<style lang="stylus" scoped>
-.nav
-    &-container
-        display: flex;
-        align-items: center;
-        padding-left: 30px;
-        padding-right: 30px; 
-        height: 108px;
-        box-shadow:0px -1px 0px 0px rgba(238,238,238,1);
-
-    &-title 
-        flex: 1;
-        font-size: 30px;/*px*/
-        height: 100%;
-        color : #909090;
-        line-height: 108px;
-        text-align: center;
-
-    &-right 
-        font-size :14px;
-        color: #909090;
-        a 
-         color: #909090;
-    &-border    
-        border-bottom : 1px solid #CDCDCD; /*no*/
+<style lang='less'>
+.nav {
+    &-container {
+        .van-nav-bar {
+            height: 110px;
+            line-height: 110px;
+            color:#909090;
+        }
+        .van-nav-bar {
+            .van-icon {
+                color:#909090;
+                font-size: 0.48rem;
+            }
+        }
+        .van-nav-bar__title {
+            font-size: 34px;
+            color: #333;
+        }
+       .van-nav-bar__text {
+           color:#909090;
+           font-size: 30px; /*px*/
+       }
+        
+    }
+}
 </style>
-

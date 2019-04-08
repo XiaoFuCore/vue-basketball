@@ -13,13 +13,18 @@ const routes = [{
     component: () =>
         import ('@/views/login')
 }, {
+    path: '/login-code',
+    name: 'LoginCode',
+    component: () =>
+        import ('@/views/login/code')
+}, {
     path: '/register',
     name: 'Register',
     component: () =>
         import ('@/views/login/register')
 }, {
     path: '/basketball',
-    redirect: '/basketball/me',
+    redirect: '/basketball/combat',
     component: () =>
         import ('@/views/layout'),
     children: [{
