@@ -21,7 +21,7 @@
                     <van-button slot="button" size="small">发送验证码</van-button>
                 </van-field>
 
-                <van-field v-model="value" placeholder="输入密码" />
+                <van-field v-model="value"  type="password" placeholder="输入密码" />
             </van-cell-group>
 
             <van-button size="large" class="register-btn">注册</van-button>
