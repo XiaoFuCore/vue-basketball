@@ -13,10 +13,18 @@
       </div>
     </div>
     <div class="me-list">
-      <van-cell icon='friends-o' title="我的战队" is-link url='/myteam' />
-      <van-cell icon='records' title="约战记录" is-link url='/myteam' />
-      <van-cell icon='fire-o' title="我的能力" is-link url='/myteam' />
-      <van-cell icon='setting-o' title="设置" is-link url='/myteam' />
+      <router-link to='/setting'>
+        <van-cell icon='friends-o' title="我的战队" is-link  />
+      </router-link>
+      <router-link to='/setting'>
+        <van-cell icon='records' title="约战记录" is-link  />
+      </router-link>
+      <router-link to='/ability'>
+        <van-cell icon='fire-o' title="我的能力" is-link  />
+      </router-link>
+      <router-link to='/setting'>
+        <van-cell icon='setting-o' title="设置" is-link  />
+      </router-link>
     </div>
   </div>
 </template>

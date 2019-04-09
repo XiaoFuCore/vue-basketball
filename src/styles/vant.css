@@ -9,11 +9,3 @@
   line-height: 116px;
   padding: 0 40px;
 }
-html,
-body {
-  height: 100%;
-}
-.container {
-  height: calc(-10%);
-  padding-top: 110px;
-}

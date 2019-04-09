@@ -5,50 +5,64 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 const routes = [{
-    path: '/',
-    redirect: '/login'
-}, {
-    path: '/login',
-    name: 'Login',
-    component: () =>
-        import ('@/views/login')
-}, {
-    path: '/login-code',
-    name: 'LoginCode',
-    component: () =>
-        import ('@/views/login/code')
-}, {
-    path: '/register',
-    name: 'Register',
-    component: () =>
-        import ('@/views/login/register')
-}, {
-    path: '/basketball',
-    redirect: '/basketball/combat',
-    component: () =>
-        import ('@/views/layout'),
-    children: [{
-        path: 'combat',
-        name: 'Combat',
-        component: () =>
-            import ('@/views/combat')
+        path: '/',
+        redirect: '/login'
     }, {
-        path: 'chat',
-        name: 'Chat',
+        path: '/login',
+        name: 'Login',
         component: () =>
-            import ('@/views/chat')
+            import ('@/views/login')
     }, {
-        path: 'team',
-        name: 'Team',
+        path: '/login-code',
+        name: 'LoginCode',
         component: () =>
-            import ('@/views/team')
+            import ('@/views/login/code')
     }, {
-        path: 'me',
-        name: 'Me',
+        path: '/register',
+        name: 'Register',
         component: () =>
-            import ('@/views/me')
-    }]
-}, ]
+            import ('@/views/login/register')
+    },
+    {
+        path: '/setting',
+        name: 'Setting',
+        component: () =>
+            import ('@/views/me/setting')
+    },
+    {
+        path: '/ability',
+        name: 'Ability',
+        component: () =>
+            import ('@/views/me/ability')
+    },
+    {
+        path: '/basketball',
+        redirect: '/basketball/combat',
+        component: () =>
+            import ('@/views/layout'),
+        children: [{
+            path: 'combat',
+            name: 'Combat',
+            component: () =>
+                import ('@/views/combat')
+        }, {
+            path: 'chat',
+            name: 'Chat',
+            component: () =>
+                import ('@/views/chat')
+        }, {
+            path: 'team',
+            name: 'Team',
+            component: () =>
+                import ('@/views/team')
+        }, {
+            path: 'me',
+            name: 'Me',
+            component: () =>
+                import ('@/views/me')
+        }]
+    },
+]
 
 
 const router = new Router({
