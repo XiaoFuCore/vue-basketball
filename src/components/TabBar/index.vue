@@ -15,33 +15,33 @@
 export default {
   data() {
     return {
-      active: 1,
+      active: 0,
       tabList: [
         {
-          id: 1,
-          active: "static/icon/home_selected@2x.png",
-          normal: "static/icon/home@2x.png",
+          id: 0,
+          active: "/static/tabbar/combat@selected3x.png",
+          normal: "/static/tabbar/combat@3x.png",
           url: "/basketball/combat",
           title: "约战"
         },
         {
-          id: 2,
-          active: "static/icon/share_selected@2x.png",
-          normal: "static/icon/share@2x.png",
-          url: "/basketball/combat",
+          id: 1,
+          active: "/static/tabbar/chat@selected3x.png",
+          normal: "/static/tabbar/chat@3x.png",
+          url: "/basketball/chat",
           title: "聊天"
         },
         {
-          id: 3,
-          active: "static/icon/share_selected@2x.png",
-          normal: "static/icon/share@2x.png",
-          url: "/basketball/combat",
+          id: 2,
+          active: "/static/tabbar/team@selected3x.png",
+          normal: "/static/tabbar/team@3x.png",
+          url: "/basketball/team",
           title: "战队"
         },
         {
-          id: 4,
-          active: "static/icon/me_selected@2x.png",
-          normal: "static/icon/me@2x.png",
+          id: 3,
+          active: "/static/tabbar/me@selected3x.png",
+          normal: "/static/tabbar/me@3x.png",
           url: "/basketball/me",
           title: "我的"
         }

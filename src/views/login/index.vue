@@ -19,7 +19,7 @@
                 <van-field v-model="value"  type="password" placeholder="输入密码" />
             </van-cell-group>
 
-            <van-button size="large" class="login-btn">登录</van-button>
+            <van-button size="large" class="login-btn" @click='login'>登录</van-button>
 
         </div>
         <div class="pact">
@@ -40,6 +40,11 @@ export default {
         return {
             sms: ""
         };
+    },
+    methods: {
+        login(){
+            this.$router.push('/basketball/combat')
+        }
     }
 };
 </script>
