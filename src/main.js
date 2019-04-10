@@ -17,8 +17,11 @@ import 'lib-flexible/flexible'
 //引入vant
 import Vant from 'vant';
 import 'vant/lib/index.css';
+//引入图表插件
+import VCharts from 'v-charts'
 
 Vue.use(Vant);
+Vue.use(VCharts)
 
 
 
