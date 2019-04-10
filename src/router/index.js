@@ -36,6 +36,12 @@ const routes = [{
             import ('@/views/me/ability')
     },
     {
+        path: '/combat_detail',
+        name: 'CombatDetail',
+        component: () =>
+            import ('@/views/combat/detail')
+    },
+    {
         path: '/basketball',
         redirect: '/basketball/combat',
         component: () =>

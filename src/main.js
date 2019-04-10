@@ -19,9 +19,24 @@ import Vant from 'vant';
 import 'vant/lib/index.css';
 //引入图表插件
 import VCharts from 'v-charts'
+//滚动
+import vuescroll from 'vuescroll';
+
+// vuescroll全局配置
+Vue.use(vuescroll, {
+    ops: {
+        mode: 'slide',
+        bar: {
+            background: '#FF3122',
+            minSize: '0.1',
+        }
+    },
+    name: 'vueScroll'
+});
 
 Vue.use(Vant);
 Vue.use(VCharts)
+
 
 
 
