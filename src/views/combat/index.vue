@@ -183,7 +183,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.flex() {
+.flex{
     display: flex;
     align-items: center;
 }
@@ -316,7 +316,7 @@ export default {
         .timer {
             color: #999;
             font-size: 24px;
-            margin-bottom: 10px;
+            margin: 20px 0;
         }
         .status {
             .flex;

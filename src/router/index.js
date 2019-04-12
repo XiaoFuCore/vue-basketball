@@ -42,6 +42,18 @@ const routes = [{
             import ('@/views/combat/detail')
     },
     {
+        path: '/combat_record',
+        name: 'CombatRecord',
+        component: () =>
+            import ('@/views/combat/record')
+    },
+    {
+        path: '/team_data',
+        name: 'TeamData',
+        component: () =>
+            import ('@/views/team/data')
+    },
+    {
         path: '/basketball',
         redirect: '/basketball/combat',
         component: () =>
