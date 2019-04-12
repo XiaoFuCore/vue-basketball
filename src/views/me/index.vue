@@ -16,7 +16,7 @@
       <router-link to='/setting'>
         <van-cell icon='friends-o' title="我的战队" is-link  />
       </router-link>
-      <router-link to='/setting'>
+      <router-link to='/combat_record'>
         <van-cell icon='records' title="约战记录" is-link  />
       </router-link>
       <router-link to='/ability'>

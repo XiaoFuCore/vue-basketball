@@ -42,16 +42,34 @@ const routes = [{
             import ('@/views/combat/detail')
     },
     {
+        path: '/combat_site',
+        name: 'CombatSite',
+        component: () =>
+            import ('@/views/combat/site')
+    },
+    {
         path: '/combat_record',
         name: 'CombatRecord',
         component: () =>
-            import ('@/views/combat/record')
+            import ('@/views/me/record')
     },
     {
         path: '/team_data',
         name: 'TeamData',
         component: () =>
             import ('@/views/team/data')
+    },
+    {
+        path: '/team_evalute',
+        name: 'TeamEvalute',
+        component: () =>
+            import ('@/views/team/evalute')
+    },
+    {
+        path: '/person',
+        name: 'Person',
+        component: () =>
+            import ('@/views/me/person')
     },
     {
         path: '/basketball',
