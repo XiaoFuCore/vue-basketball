@@ -48,6 +48,18 @@ const routes = [{
             import ('@/views/combat/site')
     },
     {
+        path: '/release',
+        name: 'Release',
+        component: () =>
+            import ('@/views/combat/release')
+    },
+    {
+        path: '/pay',
+        name: 'Pay',
+        component: () =>
+            import ('@/views/combat/pay')
+    },
+    {
         path: '/combat_record',
         name: 'CombatRecord',
         component: () =>
@@ -70,6 +82,12 @@ const routes = [{
         name: 'Person',
         component: () =>
             import ('@/views/me/person')
+    },
+    {
+        path: '/chat_singel',
+        name: 'ChatSingel',
+        component: () =>
+            import ('@/views/chat/chat')
     },
     {
         path: '/basketball',

@@ -1,6 +1,6 @@
 <template>
     <div class="chat-list">
-        <router-link to="/" class="chat-item" v-for='i in (1,100)' :key='i'>
+        <router-link to="/chat_singel" class="chat-item" v-for='i in (1,100)' :key='i'>
             <div class="main">
                 <div class="user-img">
                     <img src="@/assets/tu1@3x.png">
