@@ -6,15 +6,15 @@
             <van-icon name="ellipsis" size='25px' color='#434343' />
         </div>
         <div class="chat-list">
-            <vue-scroll>
+            <vue-scroll ref='scrollBox'>
                 <div class="timer">
                     5:40
                 </div>
-                <div class="chat-item ">
+                <div class="chat-item " v-for='i in (1,100)'>
                     <div class="user-icon">
                         <img src="@/assets/tu1@3x.png">
                     </div>
-                    <div class="chat-box left-trigel">今天我们准备去哪打球呢？</div>
+                    <div class="chat-box left-trigel">{{i}}今天我们准备去哪打球呢？</div>
                 </div>
                 <div class="chat-item row-reverse ">
                     <div class="user-icon">
@@ -29,7 +29,7 @@
                         <img src="@/assets/tu1@3x.png">
                     </div>
                     <div class="chat-box left-trigel">
-                        恩...这样不错，对了那天打球 的照片发你
+                        恩...这样不错，对了那天打球 的照片发你{{$config.imgUrl}}
                     </div>
                 </div>
             </vue-scroll>
@@ -52,6 +52,34 @@
         </div>
     </div>
 </template>
+
+<script>
+    export default {
+        data () {
+            return {
+                value:'',
+            }
+        },
+        mounted(){
+            this.scrollToBottom();
+        },
+        methods:{
+            scrollToBottom() {
+                let top = document.querySelector('.__view').scrollHeight;
+                this.$nextTick(()=>{
+                    this.$refs.scrollBox.scrollTo(
+                      {
+                        y: top 
+                      },
+                      'easeInQuad'
+                    );
+ 
+                })               
+            }
+        }
+    }
+</script>
+
 
 <style lang="less" scoped>
 .flex {

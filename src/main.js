@@ -21,6 +21,10 @@ import 'vant/lib/index.css';
 import VCharts from 'v-charts'
 //滚动
 import vuescroll from 'vuescroll';
+//引入配置全局变量
+import Config from './config'
+Vue.prototype.$config = Config
+
 
 // vuescroll全局配置
 Vue.use(vuescroll, {
@@ -36,6 +40,7 @@ Vue.use(vuescroll, {
 
 Vue.use(Vant);
 Vue.use(VCharts)
+
 
 
 
